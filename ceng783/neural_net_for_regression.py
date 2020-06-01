@@ -198,7 +198,7 @@ class TwoLayerNet(object):
     inter = wrapper["data"] - y
     loss  = np.sum(inter**2 /(2*y.shape[0]))
     # loss += reg * (np.sum(self.params["W1"]**2) + np.sum(self.params["W2"]**2)) / 2 # OVERFLOW PROBLEM
-    loss += reg * np.sum(self.params["W1"]**2) / 2  + reg *np.sum(self.params["W2"]**2) / 2
+    loss += reg * np.sum(self.params["W1"]**2) / 2  + reg * np.sum(self.params["W2"]**2) / 2
     return loss, inter
 
   def linear(self,wrapper,W,b=None):
